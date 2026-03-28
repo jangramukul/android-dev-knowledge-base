@@ -150,10 +150,10 @@
 - How does EncryptedSharedPreferences work?
 - What are database indexes in Room?
 - How does Room's compile-time SQL verification work?
-- What is Write-Ahead Logging (WAL) in SQLite?
 - How do you test Room databases?
 - What is the Storage Access Framework (SAF)?
 - When should you normalize vs denormalize a database schema?
+- What is Write-Ahead Logging (WAL) and why does SQLite use it?
 
 ### Networking & API Communication
 
@@ -179,6 +179,8 @@
 - How would you implement request deduplication?
 - What is HTTP/2 and why does it matter for mobile?
 - What is an unmetered network constraint and how does it affect background work?
+- What is the difference between FlatBuffers and JSON? When should you use FlatBuffers?
+- What is the difference between Webhook and Polling? When would you choose each?
 
 ### Notifications, Permissions & Security
 
@@ -205,6 +207,10 @@
 - What happens when a user revokes a permission while the app is running?
 - How does the network security config work in Android?
 - How do you securely store API keys in an Android app?
+- What is Cleartext traffic in Android and how do you restrict it?
+- What is the difference between Hash, Encrypt, and Encode?
+- What is the difference between Symmetric and Asymmetric Encryption?
+- What is the SMS Retriever API and how does it work?
 
 ### Memory Management & Performance
 
@@ -225,11 +231,12 @@
 - What is the difference between ART and Dalvik?
 - What are baseline profiles?
 - What is `inBitmap` and how does bitmap pooling work?
-- What is the difference between `invalidate()` and `requestLayout()`?
 - How does LeakCanary detect memory leaks?
 - What is Macrobenchmark and how does it differ from Microbenchmark?
 - How does hardware acceleration affect rendering?
 - How would you reduce APK size?
+- What is the difference between `HashMap`, `ArrayMap`, and `SparseArray`? When should you use each?
+- How do you use Memory Heap Dumps to diagnose memory issues?
 
 ### Gradle & Build System
 
@@ -255,6 +262,9 @@
 - How do you handle dependency conflicts in Gradle?
 - What is `settings.gradle.kts` and what does `dependencyResolutionManagement` do?
 - What is the difference between `includeBuild` and `include` in settings?
+- What is desugaring in Android and why is it needed?
+- What is the difference between annotationProcessor, KAPT, and KSP?
+- What is a Build Variant in Android?
 
 ### Android Internals & Process Management
 
@@ -383,6 +393,8 @@
 - What is the difference between companion object and top-level functions?
 - What is a typealias and how is it different from a value class?
 - What is the String Pool on the JVM and how does it affect Kotlin string comparisons?
+- What are Labels in Kotlin? How do you use break@label, continue@label, and return@label?
+- What are property delegates in Kotlin? Explain Delegates.observable, Delegates.vetoable, and Delegates.notNull.
 
 ### Functions & Scope Functions
 
@@ -626,7 +638,6 @@
 - What is StateFlow and how does it differ from LiveData?
 - What is the difference between UI state and data state?
 - What is SharedFlow and when do you use it instead of StateFlow?
-- What is state hoisting in Compose?
 - What is the single state object pattern?
 - What is SavedStateHandle and why do you need it?
 - How does process death differ from configuration changes?
@@ -637,7 +648,6 @@
 - How does the Compose snapshot system relate to state management?
 - How do you handle state restoration after process death in Compose?
 - What is unidirectional data flow and why does it matter for state management?
-- What is derivedStateOf and when should you use it?
 
 ### Side Effects & Lifecycle
 
@@ -665,7 +675,6 @@
 
 ### Recomposition, Stability & Performance
 
-- What is recomposition?
 - What triggers recomposition?
 - What is smart recomposition?
 - What is the stability system in Compose?
@@ -674,7 +683,6 @@
 - How does Compose handle interfaces for stability?
 - Why should I use viewModel::onClick instead of { viewModel.onClick() } in composables?
 - How does Compose compare parameters to decide whether to skip recomposition?
-- What is positional memoization?
 - What is donut-hole skipping?
 - What is strong skipping mode?
 - What are the common performance mistakes with recomposition?
@@ -890,7 +898,6 @@
 - What is the difference between exceptions and errors in Kotlin?
 - What is Kotlin's built-in Result type?
 - How does try-catch work with coroutines?
-- What is the difference between coroutineScope and supervisorScope?
 - What is CoroutineExceptionHandler?
 - How do you handle errors in Flow chains?
 - How do you design error states in a ViewModel using UDF?
@@ -919,6 +926,146 @@
 - How do you structure tests for a Clean Architecture app?
 - How do you handle flaky tests?
 - What is code coverage and how much should you aim for?
+
+## Android Libraries
+
+### Networking — OkHttp & Retrofit
+
+- What is an OkHttp Interceptor? What is the difference between an application interceptor and a network interceptor?
+- How does HTTP caching work in OkHttp?
+- How do you enable logging in OkHttp?
+- What is connection pooling and how does OkHttp manage it?
+- How does Retrofit integrate with Kotlin Coroutines and Flow?
+- What is a Multipart request and how do you implement it with Retrofit?
+- How does Retrofit's converter system work? How do you add custom converters?
+- How would you implement retry logic with OkHttp?
+
+### Image Loading — Glide & Coil
+
+- How does an image loading library like Glide or Coil work internally?
+- What is a Bitmap Pool and how does it improve performance?
+- What is the difference between Glide and Coil?
+- How does Coil integrate with Jetpack Compose?
+- What caching layers does Glide/Coil use (memory cache, disk cache)?
+- How do you handle image loading in a RecyclerView with large lists?
+- How do you load images with custom transformations (rounded corners, blur)?
+- What design patterns does Glide use internally?
+
+### Dependency Injection — Hilt & Dagger
+
+- What is the difference between Dagger 2 and Hilt?
+- How do @Inject, @Module, @Provides, @Component, and @Singleton work in Dagger?
+- What are custom scopes in Dagger and when do you need them?
+- How does Hilt simplify ViewModel injection compared to Dagger?
+- What is the difference between @ActivityRetainedScoped and @ViewModelScoped in Hilt?
+- How does Hilt handle multi-module projects?
+- What are @EntryPoint and @InstallIn and when do you use them?
+- How would you migrate from Dagger to Hilt?
+
+### RxJava
+
+- What is RxJava and how does it differ from Kotlin Coroutines?
+- What is the difference between Observable, Single, Completable, Maybe, and Flowable?
+- What is the difference between map and flatMap in RxJava?
+- What are Subjects in RxJava? Explain PublishSubject, BehaviorSubject, and ReplaySubject.
+- What are Schedulers in RxJava? What is the difference between Schedulers.io() and Schedulers.computation()?
+- What is CompositeDisposable and when should you call dispose() vs clear()?
+- How do you handle errors in RxJava?
+- How do you make two parallel network calls using RxJava Zip operator?
+- What is the difference between Concat and Merge operators?
+- When would you still use RxJava over Kotlin Coroutines in a modern Android project?
+
+### Firebase
+
+- How does Firebase Cloud Messaging (FCM) work end-to-end?
+- What is Firebase Remote Config and how do you use it for feature flags?
+- How does Firebase Crashlytics capture and report crashes?
+- What is Firebase App Distribution and when is it used?
+
+
+## Java
+
+### SOLID Principles
+
+- What is the Single Responsibility Principle (SRP) and how does it apply to Android?
+- What is the Open/Closed Principle (OCP)? Give an Android example.
+- What is the Liskov Substitution Principle (LSP) and where can it be violated?
+- What is the Interface Segregation Principle (ISP) and why does it matter?
+- What is the Dependency Inversion Principle (DIP)? How does it relate to Dependency Injection?
+
+### OOP Concepts
+
+- Explain the four pillars of OOP: Encapsulation, Abstraction, Inheritance, Polymorphism.
+- What is the difference between an abstract class and an interface?
+- What is the difference between method overloading and method overriding?
+- What are the four access modifiers in Java? What does each one allow?
+- Can an interface implement another interface?
+- What is Polymorphism and how is it achieved in Java?
+- What is the difference between compile-time (static) and runtime (dynamic) polymorphism?
+- Explain the concept of String Pool in Java.
+- What is Serialization and Deserialization? How do you implement it?
+
+### Collections & Generics
+
+- What is the difference between Array and ArrayList?
+- What is the difference between HashSet and TreeSet?
+- What is the difference between HashMap and HashSet?
+- What is the difference between HashMap, LinkedHashMap, and TreeMap?
+- Explain Generics in Java. What is the difference between `<T>`, `<? extends T>`, and `<? super T>`?
+- What is the difference between fail-fast and fail-safe iterators?
+- What is `ConcurrentModificationException` and how do you avoid it?
+- What is the difference between Collections.synchronizedList and CopyOnWriteArrayList?
+
+### Objects & Primitives
+
+- How is `String` implemented in Java? Why is it immutable?
+- What is the difference between String, StringBuffer, and StringBuilder?
+- What are the 8 primitive types in Java?
+- What is the difference between `int` and `Integer`? What is autoboxing?
+- Do objects get passed by value or by reference in Java?
+- What is the contract between `equals()` and `hashCode()`?
+- What is a Shallow Copy vs a Deep Copy?
+- What is the `transient` modifier used for?
+- What are anonymous classes?
+- When would you make a field `final`?
+
+### Memory Model & Garbage Collector
+
+- How does the Java Garbage Collector work?
+- What are the different types of references in Java — Strong, Soft, Weak, and Phantom?
+- What is a memory leak in Java and how can it happen?
+- What is the difference between the Stack and Heap memory in Java?
+- What is the PermGen/Metaspace area?
+
+### Concurrency
+
+- What does the `synchronized` keyword mean in Java?
+- What is the difference between Object-Level Lock and Class-Level Lock?
+- What is the `volatile` keyword and when do you use it?
+- What is a ThreadPoolExecutor? What are its key parameters?
+- What is the difference between Concurrency and Parallelism?
+- What methods does the atomic package expose (get, set, compareAndSet, etc.)?
+- What is a deadlock? How do you prevent it?
+- What is the difference between `wait()`, `notify()`, and `notifyAll()`?
+
+### Exceptions
+
+- How do `try`, `catch`, and `finally` work? Does `finally` always run?
+- What is the difference between a Checked and an Unchecked Exception?
+- What is the difference between `throw` and `throws`?
+- What is a StackOverflowError and when does it occur?
+
+### Other Java Topics
+
+- What does the `static` keyword mean for variables, methods, and blocks?
+- Can a `static` method be overridden?
+- When is a `static` block executed?
+- What is the difference between `==` and `.equals()` on objects?
+- What are `final`, `finally`, and `finalize`?
+- What is Reflection in Java and when would you use it?
+- What is Dependency Injection and how does it differ from the Service Locator pattern?
+- What is the difference between Serializable and Parcelable?
+
 
 ## Data Structures & Algorithms
 
@@ -1167,14 +1314,12 @@
 - How do you implement an LRU Cache with O(1) get and put?
 - How does an LFU Cache differ from LRU?
 - How do you design a HashMap from scratch?
-- How do you find the median from a data stream?
 - How do you implement a Trie-based autocomplete system?
 - How do you design a Twitter/News Feed system using DSA?
 - How do you implement a stack that supports push, pop, and getMin in O(1)?
 - How do you design a data structure for insert, remove, and getRandom in O(1)?
 - How would you implement a time-based key-value store?
 - How do you implement a basic rate limiter using a queue?
-- How do you solve Top K Frequent Elements?
 - How do you merge K sorted arrays?
 - How do you solve the task scheduler problem?
 
@@ -1270,10 +1415,8 @@
 ### Design: File Downloader Library
 
 - What are the core functional requirements for a file downloader library?
-- What are the non-functional requirements?
 - What would you keep out of scope for an initial design?
 - What are the main components in the architecture?
-- How would you design the public API?
 - What does the data model look like for a download task?
 - How do HTTP Range requests enable resume?
 - What states can a download be in, and how do transitions work?
@@ -1291,10 +1434,8 @@
 ### Design: Networking Library
 
 - What are the core functional requirements?
-- What are the non-functional requirements?
 - What is in scope and what is out of scope?
 - What does the high-level architecture look like?
-- How would you design the public API?
 - How does the interceptor chain pattern work?
 - How does the serialization layer work?
 - How does connection pooling work at a high level?
@@ -1333,9 +1474,7 @@
 ### Design: Music Streaming App
 
 - What are the core features of a music streaming app?
-- What are the key non-functional requirements?
 - How would you scope this for a 45-minute interview?
-- How would you structure the client architecture?
 - Why use Media3/ExoPlayer for audio playback?
 - What APIs does the app need from the backend?
 - What are the core data models?
@@ -1346,7 +1485,6 @@
 - How would you design the playback queue?
 - How do MediaSession and media controls work together?
 - How would you handle audio streaming and buffering?
-- How would you design the caching strategy?
 - How would you implement an equalizer and audio effects?
 - How would you handle Bluetooth, Cast, and car integration?
 - How would you handle search and recommendation on the client?
@@ -1354,11 +1492,8 @@
 ### Design: eCommerce App
 
 - What are the core functional requirements for an e-commerce app?
-- What are the key non-functional requirements?
 - What is out of scope for a typical interview?
-- How would you structure the client architecture?
 - What API endpoints does the client need?
-- What are the core data models?
 - What caching strategy would you use?
 - How would you handle image loading in a product grid?
 - How would you design search with filters and sorting?
@@ -1376,9 +1511,7 @@
 ### Design: Ride Sharing App
 
 - What are the core features a ride-sharing app needs?
-- What are the non-functional requirements?
 - Should the rider and driver be the same app or separate apps?
-- What does the client architecture look like?
 - How does real-time communication work?
 - What API endpoints does the ride lifecycle need?
 - What data models does the client need?
@@ -1398,9 +1531,7 @@
 ### Design: Location Sharing & Maps
 
 - What are the core functional requirements for a location sharing app?
-- What are the non-functional requirements?
 - How would you scope the design for a 45-minute interview?
-- What does the client architecture look like?
 - How does real-time location sharing work?
 - What APIs does the client need?
 - What are the key data models?
@@ -1419,11 +1550,7 @@
 ### Design: File Sync App
 
 - What core features should a file sync app support on the client side?
-- What are the key non-functional requirements?
 - What should we exclude from scope for this interview?
-- How would you structure the client architecture?
-- What API endpoints does the client need?
-- What data models does the client need?
 - How does delta sync work with version vectors?
 - How should the local file storage be structured?
 - How would the sync engine coordinate everything?
@@ -1462,10 +1589,8 @@
 ### Design: Analytics & Crash Reporting SDK
 
 - What are the core functional requirements for an analytics and crash reporting SDK?
-- What are the key non-functional requirements?
 - Where does the SDK's responsibility end and the host app's begin?
 - What does the overall SDK architecture look like?
-- How would you design the public API?
 - What does the backend ingestion endpoint look like?
 - What do the data models look like?
 - How does the batching strategy work?
@@ -1561,6 +1686,21 @@
 - How do you handle scope creep during a sprint?
 - How do you estimate work when requirements are unclear?
 - What's your approach to working with designers?
+
+## Other Topics
+
+- How does Kotlin Multiplatform (KMP) work?
+- What is React Native and how does it differ from Flutter and native Android?
+- How do you implement Dark Theme in an Android app?
+- How would you identify users who have uninstalled your application?
+- What are the key Android App Performance Metrics you should track?
+- What is AAPT and what role does it play in the build process?
+- How do you avoid API keys being checked into version control?
+- How do you implement local notifications at an exact time?
+- How do you use Android Studio Memory Profiler to diagnose memory issues?
+- Can we identify users who have uninstalled our application?
+- What is the Android App Release Checklist you follow before launching to production?
+
 
 ## Coding Tests
 
@@ -1671,7 +1811,6 @@
 - How do you set up Hilt dependency injection for this project?
 - How do you handle GitHub API rate limiting?
 - What's the difference between the StackOverflow and GitHub API response structures?
-- How do you unit test the ViewModel?
 
 ### Build: Custom UI Component
 
