@@ -25,7 +25,7 @@ A curated collection of Android engineering resources — interview questions, a
 
 ---
 
-### 📝 [Blog](./blog/)
+### ✏️ [Blog](./blog/)
 Engineering articles on Android development, architecture, and best practices.
 
 - [Gradle Build Process Guide](./blog/2018-01-24-gradle-build-process.md)
