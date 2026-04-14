@@ -6,7 +6,7 @@ A curated collection of Android engineering resources
 
 ### [Personal Blog](./blog/)
 Engineering articles on Android development, architecture, and best practices.
-)
+
 - [Compose Beyond The UI?](./blog/2025-10-14-compose-beyond-ui.md)
 - [Mobile System Design Guide](./blog/2024-10-21-mobile-system-design.md)
 - [Design Patterns Guide in Kotlin](./blog/2024-10-18-kotlin-design-patterns.md)
