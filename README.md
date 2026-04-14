@@ -1,6 +1,6 @@
 # 🤖 Android Knowledge Base Camp
 
-A curated collection of Android engineering resources — interview questions, architecture deep-dives, best practices, and engineering blog posts from real-world experience.
+A curated collection of Android engineering resources
 
 ---
 
