@@ -1,11 +1,4 @@
----
-title: Compose Beyond The UI?
-layout: post
-categories: post
-tags:
-  - Android
-  - Kotlin
----
+# Compose Beyond The UI?
 
 A few years ago, I remember managing almost everything with `Threads`, `AsyncTask`, and `Handlers` for background tasks and UI updates. It was quite messy, specifically writing business logic.
 

@@ -1,11 +1,5 @@
----
-title: Introduction to Clean Architecture
-layout: post
-categories: post
-tags:
-  - Android
-  - Architecture
----
+# Introduction to Clean Architecture
+
 Let's talk about something that's been bugging Android developers for ages - Clean Architecture. You know how everyone's always like "Should I use MVVM? Or maybe MVP?" Well, let me tell you something cool - it's not just about picking one and sticking with it.
 
 Most go with MVVM because, well, it sounds fancy and everyone else is doing it. But here's the thing - you don't have to follow the crowd. You can pick whatever makes sense for your project. Today, we're going to look at an architecture that's perfect for big projects and actually makes your life easier.

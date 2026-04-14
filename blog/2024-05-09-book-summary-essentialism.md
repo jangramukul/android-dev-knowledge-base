@@ -1,10 +1,4 @@
----
-title: Essentialism By Greg McKeown Book Summary
-layout: post
-categories: post
-tags:
-  - Book
----
+# Essentialism By Greg McKeown Book Summary
 
 In Essentialism, Greg McKeown draws on experience and insight from working with the leaders of the most innovative companies in the world to show how to achieve the disciplined pursuit of less.
 

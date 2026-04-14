@@ -1,12 +1,5 @@
----
-title: Common Architectural Principles Guide
-layout: post
-categories: post
-tags:
-  - Android
-  - Architecture
-  - Best Practices
----
+# Common Architectural Principles Guide
+
 As Android apps grow in size, it's important to design architecture that allows the app to scale, increases the app's robustness, and makes the app easier to test. Here are some design principles we can follow to design our app:
 
 ### Separation of logic

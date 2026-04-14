@@ -1,12 +1,4 @@
----
-title: Design Patterns Guide in Kotlin
-layout: post
-categories: post
-tags:
-  - Kotlin
-  - Architecture
-  
----
+# Design Patterns Guide in Kotlin
 
 You might wonder how software engineers are able to write well-structured, flexible, and clean code. You might also wonder what patterns and principles they follow to master clean code. Let's break down the topic into smaller chunks and look at the core principles and key points to master clean, flexible, and testable code.
 

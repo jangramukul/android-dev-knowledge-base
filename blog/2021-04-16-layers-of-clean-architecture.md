@@ -1,11 +1,5 @@
----
-title: Understanding the Layers of Clean Architecture
-layout: post
-categories: post
-tags:
-  - Android
-  - Architecture
----
+# Understanding the Layers of Clean Architecture
+
 Clean Architecture typically consists of three main layers: Data, Domain, and Presentation, each with distinct responsibilities and dependencies.
 
 ### Data Layer

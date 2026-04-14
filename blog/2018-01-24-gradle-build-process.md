@@ -1,13 +1,5 @@
----
-title: Gradle Build Process Guide
-layout: post
-categories: post
+# Gradle Build Process Guide
 
-tags:
-  - Android
-  - Gradle
-
----
 Gradle is a open source build automation tool that is designed to be flexible enough to build almost any type of software with certain defined configurations. Gradle uses groovy language to run and build the software. Now days gradle also supports kotlin. It means you able to run kotlin code for gradle. In Android, Android studio use Gradle to manage the build process with some certain build configurations which allows you to build apks or bundle by compile the app resources or source code.
 
 #### The Build Process

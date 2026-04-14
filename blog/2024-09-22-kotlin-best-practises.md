@@ -1,12 +1,4 @@
----
-title: Kotlin Best Practises Guide
-layout: post
-categories: post
-tags:
-  - Android
-  - Kotlin
-  - Best Practices
----
+# Kotlin Best Practises Guide
 
 1. **Resource Management**
 Use the use() function for resources like files or databases to ensure automatic closure, even if an exception occurs. This will help in prevent the memory leaks and close the FileDescriptors which is unused to work.

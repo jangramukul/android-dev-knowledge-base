@@ -1,12 +1,4 @@
----
-title: Jetpack Compose Best Practises Guide
-layout: post
-categories: post
-tags:
-  - Android
-  - Best Practices
-  - Jetpack Compose
----
+# Jetpack Compose Best Practises Guide
 
 1. **Survive Recomposition**
 Use `remember` to retain state across recompositions. For example, store a text field’s value to prevent resetting during UI updates.

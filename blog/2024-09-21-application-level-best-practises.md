@@ -1,11 +1,4 @@
----
-title: Application Level Best Practises Guide
-layout: post
-categories: post
-tags:
-  - Android
-  - Best Practices
----
+# Application Level Best Practises Guide
 
 1. **Use App Startup for Initialization**
 The App Startup library simplifies application-level initialization by centralizing component setup. Instead of relying on base application (which add overhead and cause slow app launch), App Startup allows you to define initializers, reducing startup time and improving efficiency.
