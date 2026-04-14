@@ -20,7 +20,7 @@ Engineering articles on Android development, architecture, and best practices.
 - [Kotlin Flows With Operators Guide](./blog/2023-02-08-master-kotlin-flows-with-operators.md)
 - [Application Level Best Practises Guide](./blog/2024-09-21-application-level-best-practises.md)
 - [Kotlin Best Practises Guide](./blog/2024-09-22-kotlin-best-practises.md)
-- [Follow Right Architecture Patterns Naming](./blog/2024-09-23-architecture-pattern-naming.md
+- [Follow Right Architecture Patterns Naming](./blog/2024-09-23-architecture-pattern-naming.md)
 
 ---
 
