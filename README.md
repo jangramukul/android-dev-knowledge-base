@@ -6,25 +6,6 @@ A curated collection of Android engineering resources — interview questions, a
 
 ## 📚 Contents
 
-### [Android Interview Questions](./android-interview-questions.md)
-900+ questions spanning Android, Kotlin, Jetpack Compose, Architecture, DSA, System Design, Behavioral, and Coding Tests.
-
-**Topics covered:**
-- Activity & Fragment Lifecycle
-- Android Components
-- Kotlin
-- Kotlin Coroutines & Flows
-- Jetpack Compose
-- Architecture & Design
-- Android Libraries
-- Java
-- Data Structures & Algorithms
-- Mobile System Design
-- Behavioral & Career
-- Coding Tests
-
----
-
 ### ✏️ [Blog](./blog/)
 Engineering articles on Android development, architecture, and best practices.
 
@@ -46,6 +27,25 @@ Engineering articles on Android development, architecture, and best practices.
 - [Mobile System Design Guide](./blog/2024-10-21-mobile-system-design.md)
 - [How To Write Testable Code?](./blog/2024-10-22-writing-testable-code.md)
 - [Compose Beyond The UI?](./blog/2025-10-14-compose-beyond-ui.md)
+
+---
+
+### [Android Interview Questions](./android-interview-questions.md)
+Questions spanning Android, Kotlin, Jetpack Compose, Architecture, DSA, System Design, Behavioral, and Coding Tests.
+
+**Topics covered:**
+- Activity & Fragment Lifecycle
+- Android Components
+- Kotlin
+- Kotlin Coroutines & Flows
+- Jetpack Compose
+- Architecture & Design
+- Android Libraries
+- Java
+- Data Structures & Algorithms
+- Mobile System Design
+- Behavioral & Career
+- Coding Tests
 
 ---
 
