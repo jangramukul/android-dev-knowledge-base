@@ -4,8 +4,6 @@ A curated collection of Android engineering resources
 
 ---
 
-## Contents
-
 ### [Personal Blog](./blog/)
 Engineering articles on Android development, architecture, and best practices.
 
